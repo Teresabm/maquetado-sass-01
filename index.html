@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <title>Styles with sass</title>
+</head>
+<body>
+    <header class="header">
+        <section class="header__headline">
+            <div class="header__container--headline container">
+                <div class="header__logo">
+                    <p>/Practicetbm</p>
+                </div>
+                <nav class="header__nav">
+                    <div class="header__container--nav">
+                        <ul class="header__list">
+                            <li class="header__item">
+                                <a href="#">Home</a>
+                            </li>
+                            <li class="header__item">
+                                <a href="#">Services</a>
+                            </li>
+                            <li class="header__item">
+                                <a href="#">Our work</a>
+                            </li>
+                        </ul>
+                        <a href="#" class="btn-st">Contact</a>
+                    </div>
+                </nav>
+                <div class="header__dinamic">
+                    <label for="header__input" class="header__label"></label>
+                    <input type="checkbox"  id="header__input">
+                </div>
+            </div>
+        </section> 
+        <section class="header__hero">
+            <div class="header__container--hero container">
+                <section class="header__textArea">
+                    <div class="header__text">
+                        <h1>
+                            Task management application 
+                            that really works.
+                        </h1>
+                        <p>
+                            Our team works continuously to 
+                            provide you with the most equipped 
+                            application to increase your business.
+                        </p>
+                    </div>
+                    <a href="#" class="btn-st">Get started</a>
+                </section>
+                <figure class="header__pictureArea">
+                    <img src="assets/hero-picture.svg" alt="hero-img" class="img">
+                    <figcaption>
+                        <a href="https://storyset.com/education" class="header__storyset" target="_blank">Education illustrations by Storyset</a>
+                    </figcaption>
+                </figure>
+            </div>
+        </section>
+        <footer class="header__footer">
+            <div class="header__container--footer container">
+                <div class="header__media-links">
+                    <a href="#">
+                        <img src="assets/icon-facebook.svg" alt="" class="btn-media">
+                    </a>
+                    <a href="#">
+                        <img src="assets/icon-twitter.svg" alt="" class="btn-media">
+                    </a>
+                    <a href="#">
+                        <img src="assets/icon-instagram.svg" alt="" class="btn-media">
+                    </a>
+                </div>
+                <ul class="header__list--footer">
+                    <li class="header__item--footer">
+                        <a href="#">Other projects</a>
+                    </li>
+                    <li class="header__item--footer">
+                        <a href="#">Help center</a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </header>
+</body>
+</html>

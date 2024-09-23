@@ -1,0 +1,48 @@
+/* variables */
+@use 'variables';
+
+h1{
+    font-size: clamp(1.75rem, 1.6429rem + 0.4762vw, 2rem);
+    color: variables.$color-02;
+    text-wrap: balance;
+}
+p{
+    font-size: clamp(0.875rem, 0.8214rem + 0.2381vw, 1rem);
+    color: variables.$color-02;
+    text-wrap: pretty;
+}
+a{
+    font-size: clamp(0.875rem, 0.8214rem + 0.2381vw, 1rem);
+    text-decoration: none;
+    color: variables.$color-02;
+    font-weight: 600;
+}
+a:hover{
+    color: #292929c4;
+}
+.btn-st{
+    padding: 0.5rem 1.5rem;
+    background-color: variables.$color-03;
+    color: variables.$color-01;
+    border-radius: 0.5rem;
+}
+.btn-st:hover{
+    color: variables.$color-01;
+    background-color: #7b00fe9a;
+}
+.btn-media{
+    background-color: variables.$color-02;
+    padding: 0.3rem;
+    border-radius: 100%;
+}
+.img{
+    width: 100%;
+}
+.container{
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+ul{
+    list-style: none;
+}

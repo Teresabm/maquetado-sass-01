@@ -1,0 +1,142 @@
+@use 'variables';
+@use 'mixinfunc';
+
+.header{
+    /* headline */
+    &__headline{
+        background-color: variables.$color-01;
+        position: relative;
+        --bg-image:url(../assets/open.svg);
+        --clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    &__container--headline{
+        @include mixinfunc.d-flex(space-between,center);
+        height: 100px;
+    }
+    &__nav{
+        background-color: #d9d6e7;
+        position: absolute;
+        top: 100%;
+        inset-inline: 0;
+        @include mixinfunc.d-flex(center,center);
+        padding: 2rem 0rem;
+        clip-path:var(--clip-path);
+        transition: clip-path .3s; 
+    }
+    &__container--nav{
+        width: 80%;
+        @include mixinfunc.d-flex(center,flex-start);                
+        flex-direction: column;
+        gap: 2rem;
+    }
+    &__list{
+        @include mixinfunc.d-flex(center,flex-start); 
+        flex-direction: column;               
+        gap: 0.8rem;
+    }
+    &__dinamic{
+        display: flex;
+    }
+    &__label{
+        background-image: var(--bg-image);
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        transition: background-image .3s;
+    }
+    & #header__input{
+        display: none;
+    }
+    &__container--headline:has(input:checked){
+        --bg-image:url(../assets/close.svg);
+        --clip-path:polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    @media (width > 968px){
+        &__dinamic{
+            display: none;
+        }
+        &__nav{
+            background-color: transparent;
+            position: static;
+            @include mixinfunc.d-flex(center,flex-end);
+            padding: 0rem 0rem;
+            clip-path:none;
+            flex: 1;
+        }
+        &__container--nav{
+            width: 100%;
+            @include mixinfunc.d-flex(flex-end,center);               
+            flex-direction: row;
+        }
+        &__list{
+            @include mixinfunc.d-flex(center,center); 
+            flex-direction: row;
+            gap: 1.5rem;
+        }
+    }
+    /* hero */
+    &__hero{
+        background-color: variables.$color-01;
+        padding: variables.$section-padding;
+    }
+    &__container--hero{
+        @include mixinfunc.d-flex(center,center);
+        flex-direction: column;
+        gap: 5rem;
+    }
+    &__textArea{
+        width: 90%;
+        max-width: variables.$contenedor-max;
+        @include mixinfunc.d-flex(center,center);
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+    }
+    &__text{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+    &__pictureArea{
+        width: 60%;
+        max-width: variables.$contenedor-max;
+    }
+    &__storyset{
+        font-size: 8px;
+    }
+    @media (width > 968px){
+        &__container--hero{
+            flex-direction: row;
+            @include mixinfunc.d-flex(space-between,center)
+        }
+        &__textArea{
+            @include mixinfunc.d-flex(center,flex-start);
+            text-align: left;
+        }
+    }
+    /* footer */
+    &__footer{
+        background-color: variables.$color-01;
+        padding: 1rem;
+    }
+    &__container--footer{
+        @include mixinfunc.d-flex(space-between,center);
+        gap:1rem;
+    }
+    &__media-links{
+        display: flex;
+        gap: 0.5rem;
+    }
+    &__list--footer{
+        display: flex;
+        gap: 0.5rem;
+    }
+    @media (width > 968px){
+        &__container--footer{
+            @include mixinfunc.d-flex(flex-start,center);
+            gap:1rem;
+        }
+    }
+}
